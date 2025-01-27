@@ -1,0 +1,32 @@
+.AppNavBar {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin: 0px 4px;
+
+    > .AppNavBar-logo {
+        margin-right: 6px;
+    }
+
+    > .AppNavBar-title {
+        margin-right: 20px;
+    }
+    
+    .spacer {
+        flex: 1;
+    }
+
+    button {
+        min-width: unset;
+        outline: none;
+
+        &[data-is-selected='true'] {
+            background-color: #a1a1a1;
+        }
+
+        > svg {
+            width: 24px;
+            height: 24px;
+        }
+    }    
+}

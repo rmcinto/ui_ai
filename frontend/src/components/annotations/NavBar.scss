@@ -1,0 +1,38 @@
+.AnnotationNaveBar {
+    position: relative;
+
+    > .AnnotationNaveBar-breadcrumbs {
+        padding: 5px;
+        box-sizing: border-box;
+        border: 1px solid #a1a1a1;
+        overflow: hidden;
+
+        a {
+            cursor: pointer;
+        }
+    }
+
+    > .AnnotationNaveBar-items {
+        position: absolute;
+        height: calc(100% - 36px);
+        width: 100%;
+        box-sizing: border-box;
+        border-right: 1px solid #a1a1a1;
+        overflow: auto;
+
+        > .AnnotationNaveBar-item {
+            cursor: pointer;
+            box-sizing: border-box;
+            border-radius: 4px;
+            padding: 5px 10px 5px 10px;
+    
+            &:focus {
+                border: 1px solid;
+            }
+    
+            > svg {
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.KeywordsPanel {
+    display: flex;
+    flex-direction: column;
+
+    > .KeywordsPanel-title {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #919191;
+        padding: 6px 6px;
+
+        > div {
+            flex: 1;
+        }
+
+        > svg {
+            cursor: pointer;
+        }
+    }
+
+    > .KeywordsPanel-keywords {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 4px;
+        padding-right: 4px;
+
+        > .KeywordsPanel-keyword {
+            border-radius: 10px;
+            background-color:gold;
+            font-size: .875rem;
+            padding: 2px 5px;
+            margin-top: 4px;
+            margin-left: 4px;
+            color: #444444;
+
+            > svg {
+                margin-left: 5px;
+                cursor: pointer;
+            }
+        }
+
+        > .KeywordsPanel-add {
+            cursor: pointer;
+            margin-top: 6px;
+            margin-left: 6px;
+        }
+    }
+}

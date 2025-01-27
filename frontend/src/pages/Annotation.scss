@@ -1,0 +1,27 @@
+.Annotation {
+    position: relative;
+    display: flex;
+    border-top: 1px solid #a1a1a1;
+
+    > .Annotation-main {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex: 1;
+        
+        > .Annotation-main-canvas {
+            flex: 1;
+            position: relative;
+            overflow: auto;
+        }
+
+        > .Annotation-main-status {
+            border-top: 1px solid #a1a1a1;
+            height: 24px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: .875rem;
+            padding: 0px 6px;
+        }
+    }
+}

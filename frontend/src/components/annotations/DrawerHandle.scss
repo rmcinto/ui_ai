@@ -1,0 +1,58 @@
+.DrawerHandle {
+    position: relative;
+    display: block;
+    overflow: visible;
+    width: 0px;
+    height: 100%;
+    overflow: visible;
+    z-index: 100;
+    transform: scaleX(-1);
+
+    &::before {
+        content: ' ';
+        position: absolute;
+        width: 8px;
+        height: 100%;
+    }
+
+    > .DrawerHandle-button {
+        opacity: 0;
+        transition: opacity .5s .5s;
+        min-width: unset;
+        background-color: #a1a1a1;
+        outline: unset;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        
+        > svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &[data-direction="left"] {
+        transform: unset;
+    }
+
+    &[data-is-collapsed='false'][data-is-resizing = 'true'] {
+        &::before {
+            width: 400px;
+            left: -200px;
+        }
+    }
+
+    &[data-is-collapsed='false'][data-is-resizing = 'false'] {
+        &::before {
+            left: -4px;
+        }
+    }
+
+    &:hover {
+        cursor: col-resize;
+
+        > .DrawerHandle-button {
+            opacity: 1;
+            transition: unset;
+        } 
+    }
+}

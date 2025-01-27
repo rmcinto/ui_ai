@@ -1,0 +1,76 @@
+.BoundingBox {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid #FF0000;
+    cursor: move;
+
+    > .BoundingBox-mask {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+    }
+
+    > .BoundingBox-handle {
+        position: absolute;
+    }
+
+    > .BoundingBox-corner {
+        width: 8px;
+        height: 8px;
+    }
+
+    > .BoundingBox-edge-horiz {
+        height: 8px;
+        width: 100%;
+        cursor: ns-resize;
+    }
+
+    > .BoundingBox-edge-vert {
+        height: 100%;
+        width: 8px;
+        cursor: ew-resize;
+    }
+
+    > .BoundingBox-top {
+        top: -4px;
+    }
+
+    > .BoundingBox-bottom {
+        bottom: -4px;
+    }
+
+    > .BoundingBox-left {
+        left: -4px;
+    }
+
+    > .BoundingBox-right {
+        right: -4px;
+    }
+
+    > .BoundingBox-top-right {
+        top: -4px;
+        right: -4px;
+        cursor: ne-resize;
+    }
+
+    > .BoundingBox-bottom-left {
+        bottom: -4px;
+        left: -4px;
+        cursor: sw-resize;
+    }
+
+    > .BoundingBox-top-left {
+        top: -4px;
+        left: -4px;
+        cursor: nw-resize;
+    }
+
+    > .BoundingBox-bottom-right {
+        right: -4px;
+        bottom: -4px;
+        cursor: se-resize;
+    }
+}

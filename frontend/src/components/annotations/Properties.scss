@@ -1,0 +1,60 @@
+.Properties {
+    display: flex;
+    flex-direction: column;
+
+    > .Properties-title {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #919191;
+        padding: 6px 6px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &[data-is-selected='true'] {
+            background-color: #a1a1a1;
+            color: #414141;
+        }
+
+        > .Properties-title-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            min-width: 102px;
+
+            > svg {
+                cursor: pointer;
+                margin-left: 10px;
+            }
+        }
+
+        > .Properties-title-text {
+            flex: 1;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    > .Properties-items {
+
+        > .Property {
+            display: flex;
+            border-bottom: 1px solid #a1a1a1;
+            padding: 4px;
+    
+            > .Property-label {
+                width: 150px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+    
+            > .Property-input {
+                width: calc(100% - 150px);
+            }
+        }
+    }
+
+    
+}

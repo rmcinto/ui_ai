@@ -1,0 +1,49 @@
+.PropertiesPanel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #919191;
+    min-width: 200px;
+    overflow: auto;
+
+    > .KeywordsPanel {
+        border-top: 1px solid #919191;
+    }
+
+    > .Properties:nth-child(2) {
+        border-top: 1px solid #919191;
+    }
+
+    > .PropertiesPanel-annotations {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-top: 1px solid #919191;
+        border-bottom: 1px solid #919191;
+        padding: 6px 6px;
+
+        > div {
+            flex: 1;
+        }
+        
+        > button {
+            min-width: unset;
+            padding: 0px;
+            margin-left: 4px;
+
+            > svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    > .Properties:nth-child(n+4) {
+        border-top: 1px solid #919191;
+    }
+
+    > .Properties {
+        display: flex;
+        flex-direction: column;
+    }
+}
