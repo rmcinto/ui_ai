@@ -157,7 +157,7 @@ function Annotation() {
         const newZoomScale = zoomScaleRef.current - event.deltaY * interval;
         setZoomScale(newZoomScale);
         zoomScaleRef.current = newZoomScale;
-    };
+    }
 
     const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
         if (!mainRef.current)

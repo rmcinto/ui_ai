@@ -97,42 +97,43 @@ const Properties: React.FC<PropertiesProps> = ({
                 </div>
 
             </div>
-            <div
-                className="Properties-items"
-                hidden={collapse}
-            >
-                {
-                    Object.keys(properties).map((propName) => {
-                        const property = properties.hasOwnProperty(propName)
-                            ? properties[propName]
-                            : "";
+            {!collapse && (
+                <div
+                    className="Properties-items"
+                >
+                    {
+                        Object.keys(properties).map((propName) => {
+                            const property = properties.hasOwnProperty(propName)
+                                ? properties[propName]
+                                : "";
 
-                        if (property && typeof property === "object") {
-                            return <Properties
-                                key={propName}
-                                path={`${path}.${propName}`}
-                                title={propName}
-                                properties={property}
-                                onChange={onChange}
-                                level={level + 1}
-                            />
-                        }
-                        else {
-                            return <Property
-                                key={propName}
-                                path={`${path}.${propName}`}
-                                propName={propName}
-                                value={property}
-                                isList={Array.isArray(properties)}
-                                onChange={onChange}
-                                style={{
-                                    paddingLeft: `${level * 5 + 10}px`
-                                }}
-                            />
-                        }
-                    })
-                }
-            </div>
+                            if (property && typeof property === "object") {
+                                return <Properties
+                                    key={propName}
+                                    path={`${path}.${propName}`}
+                                    title={propName}
+                                    properties={property}
+                                    onChange={onChange}
+                                    level={level + 1}
+                                />
+                            }
+                            else {
+                                return <Property
+                                    key={propName}
+                                    path={`${path}.${propName}`}
+                                    propName={propName}
+                                    value={property}
+                                    isList={Array.isArray(properties)}
+                                    onChange={onChange}
+                                    style={{
+                                        paddingLeft: `${level * 5 + 10}px`
+                                    }}
+                                />
+                            }
+                        })
+                    }
+                </div>
+            )}
         </div>
     )
 }

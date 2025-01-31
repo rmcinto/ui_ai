@@ -36,25 +36,4 @@
             overflow: hidden;
         }
     }
-
-    > .Properties-items {
-
-        > .Property {
-            display: flex;
-            border-bottom: 1px solid #a1a1a1;
-            padding: 4px;
-    
-            > .Property-label {
-                width: 150px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-    
-            > .Property-input {
-                width: calc(100% - 150px);
-            }
-        }
-    }
-
-    
 }

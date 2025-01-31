@@ -1,0 +1,54 @@
+.AnnotationsPanel {
+    display: flex;
+    flex-direction: column;
+
+    > .AnnotationsPanel-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-top: 1px solid #919191;
+        border-bottom: 1px solid #919191;
+        padding: 6px 6px;
+
+        > div {
+            flex: 1;
+        }
+
+        svg {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        > button {
+            min-width: unset;
+            padding: 0px;
+            margin-right: 4px;
+
+            > svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    > .AnnotationsPanel-items {
+        display: block;
+        position: relative;
+        overflow: auto;
+        flex: 1;
+
+        > .AnnotationsPanel-items-container {
+            position: relative;
+            overflow: hidden;
+
+            .Properties {
+                min-height: 38px;
+            }
+        }
+    }
+
+    > .Properties {
+        display: flex;
+        flex-direction: column;
+    }
+}

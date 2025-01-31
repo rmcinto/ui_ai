@@ -1,3 +1,4 @@
+import "./Property.scss";
 import { CSSProperties } from "react";
 import { DeleteProperty } from "../../pages/Annotation";
 

@@ -1,0 +1,19 @@
+.ProcessPanel {
+    display: flex;
+    flex-direction: column;
+
+    > .ProcessPanel-title {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #919191;
+        padding: 6px 6px;
+
+        > div {
+            flex: 1;
+        }
+
+        > svg {
+            cursor: pointer;
+        }
+    }
+}
